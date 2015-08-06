@@ -1,0 +1,7 @@
+{
+    "realm": "grandstream",
+	"impi": "Anonymous",
+	"impu": "sip:anonymous@anonymous.invalid",
+	"display_name": "Anonymous",
+	"websocket_proxy_url": "ws://192.168.124.68:8088/ws"
+}
