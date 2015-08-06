@@ -59,8 +59,8 @@ body {
 .server .server-body {
     position: absolute;
     right: -144px;
-    width: 122px;
-    height: 180px;
+    width: 150px;
+    height: 210px;
     padding: 12px 10px;
     -webkit-transition: .3s cubic-bezier(.19, 1, .22, 1);
     -o-transition: .3s cubic-bezier(.19, 1, .22, 1);
