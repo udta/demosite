@@ -369,8 +369,10 @@ function sipRegister() {
 			}, {
 				name: 'Organization',
 				value: 'Doubango Telecom'
-			}],
-			x_cookie: document.cookie
+			}, {
+                name: 'x_cookie',
+                value: document.cookie
+            }]
 		});
 
 		if (oSipStack.start() != 0) {
