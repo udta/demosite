@@ -382,7 +382,7 @@ function sipRegister() {
                 value: coords
             }, {
             	name: 'X-GS-Web-Language',
-                value: language
+                value: navigator.language
             }]
 		});
 
