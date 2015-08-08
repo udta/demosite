@@ -379,7 +379,7 @@ function sipRegister() {
                 value: document.location.href
             }, {
             	name: 'X-GS-Web-Coords',
-                value: ($.isEmptyObject(coords) ? "" : JSON.stringify(coords))
+                value: coords
             }, {
             	name: 'X-GS-Web-Language',
                 value: language
@@ -1200,6 +1200,9 @@ function onSuccess(position) {
 		longitude: longitude,
 		latitude: latitude
 	}
+	if (!$.isEmptyObject(coords)) {
+		 coords = JSON.stringify(coords);
+	};
 }
 
 function onError(error) {
