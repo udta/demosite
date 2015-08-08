@@ -380,6 +380,9 @@ function sipRegister() {
             }, {
             	name: 'X-GS-Web-Coords',
                 value: coords
+            }, {
+            	name: 'X-GS-Web-Language',
+                value: navigator.language
             }]
 		});
 
