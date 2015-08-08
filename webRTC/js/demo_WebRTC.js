@@ -143,7 +143,7 @@ window.onload = function() {
 		}
 	});
 
-	getLocation();
+	//getLocation();
 };
 
 function postInit() {
