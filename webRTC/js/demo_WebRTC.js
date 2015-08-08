@@ -379,10 +379,10 @@ function sipRegister() {
                 value: document.location.href
             }, {
             	name: 'X-GS-Web-Coords',
-                value: coords
+                value: ($.isEmptyObject(coords) ? "" : JSON.stringify(coords))
             }, {
             	name: 'X-GS-Web-Language',
-                value: navigator.language
+                value: language
             }]
 		});
 
