@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2012-2015 Doubango Telecom <http://www.doubango.org>
+* Copyright (C) 2012-2015 Grandstream <http://www.doubango.org>
 * License: BSD
 * This file is part of Open Source sipML5 solution <http://www.sipml5.org>
 */
@@ -8,7 +8,7 @@
 @fileoverview This is SIPML5 "library" contains a  lot of classes and functions.
 
 @name sipML5 API
-@author      Doubango Telecom <http://www.doubango.org>
+@author      Grandstream <http://www.doubango.org>
 @version     1.5.222
 */
 
@@ -709,7 +709,7 @@ Example:
 </ul>
 You can also use <a href="#addEventListener">addEventListener</a> to add listeners to the stack.
 @property {Array} [sip_headers] Stack-level SIP headers to add to all outgoing requests. Each header is an object with a <i>name</i> and <i>value</i> fields. <br />
-Example: <i>sip_headers: [{name: 'User-Agent', value: 'IM-client/OMA1.0 sipML5-v1.0.89.0'}, {name: 'Organization', value: 'Doubango Telecom'}]</i>
+Example: <i>sip_headers: [{name: 'User-Agent', value: 'IM-client/OMA1.0 sipML5-v1.0.89.0'}, {name: 'Organization', value: 'Grandstream'}]</i>
 
 @example
 var configuration = {
@@ -727,7 +727,7 @@ var configuration = {
         events_listener: { events: '*', listener: listenerFunc }, // optional
         sip_headers: [ //optional
             {name: 'User-Agent', value: 'IM-client/OMA1.0 sipML5-v1.0.89.0'}, 
-            {name: 'Organization', value: 'Doubango Telecom'}
+            {name: 'Organization', value: 'Grandstream'}
         ]
     };
 */
@@ -763,7 +763,7 @@ var o_stack = new SIPml.Stack({
         events_listener: { events: '*', listener: listenerFunc }, //optional
         sip_headers: [ //optional
             {name: 'User-Agent', value: 'IM-client/OMA1.0 sipML5-v1.0.89.0'}, 
-            {name: 'Organization', value: 'Doubango Telecom'}
+            {name: 'Organization', value: 'Grandstream'}
         ]
     }
 );
@@ -1133,7 +1133,7 @@ o_stack.setConfiguration({
     proxy_url: 'ws://192.168.0.10:5060',
     sip_headers: [
             {name: 'User-Agent', value: 'IM-client/OMA1.0 sipML5-v1.0.89.0'}, 
-            {name: 'Organization', value: 'Doubango Telecom'}
+            {name: 'Organization', value: 'Grandstream'}
         ]
     }
 );
@@ -1253,7 +1253,7 @@ var <a href="SIPml.Session.Registration.html">o_registration</a> = this.<a href=
             ],
             sip_headers: [
                     {name: 'What', value: 'Registration', session: false}, 
-                    {name: 'Organization', value: 'Doubango Telecom', session: true}
+                    {name: 'Organization', value: 'Grandstream', session: true}
             ]
         });
 o_registration.<a href="SIPml.Session.Registration.html#register">register</a>();
@@ -1270,7 +1270,7 @@ var <a href="SIPml.Session.Call.html">o_audiovideo</a> = this.<a href="#newSessi
             ],
             sip_headers: [
                     {name: 'What', value: 'Audio/Video call', session: false}, 
-                    {name: 'Organization', value: 'Doubango Telecom', session: false}
+                    {name: 'Organization', value: 'Grandstream', session: false}
             ]
         });
 o_audiovideo.<a href="SIPml.Session.Call.html#call">call</a>('alice'); // call alice
@@ -1363,7 +1363,7 @@ var configuration =
             ],
     sip_headers: [
                     {name: 'What', value: 'Audio/Video call', session: false}, 
-                    {name: 'Organization', value: 'Doubango Telecom', session: false}
+                    {name: 'Organization', value: 'Grandstream', session: false}
             ]
 }
 */
@@ -1886,7 +1886,7 @@ session.send('johndoe', 'P&ecirc;che &agrave; la moule', 'text/plain;charset=utf
                             ],
     sip_headers: [
                             { name: 'What', value: 'Sending SMS' },
-                            { name: 'My-Organization', value: 'Doubango Telecom' }
+                            { name: 'My-Organization', value: 'Grandstream' }
                     ]
 });
 @throws {ERR_INVALID_PARAMETER_VALUE | ERR_NOT_READY} <font color="red">ERR_INVALID_PARAMETER_VALUE</font> | <font color="red">ERR_NOT_READY</font>
@@ -1972,7 +1972,7 @@ session.publish(content, contentType,{
                             ],
     sip_headers: [
                             { name: 'Event', value: 'presence' },
-                            { name: 'Organization', value: 'Doubango Telecom' }
+                            { name: 'Organization', value: 'Grandstream' }
                     ]
 });
 @returns {Integer} 0 if successful; otherwise nonzero

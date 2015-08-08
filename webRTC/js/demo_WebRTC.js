@@ -13,6 +13,7 @@ var txtPhoneNumber = $("#txtPhoneNumber")[0];
 var C = {
 	divKeyPadWidth: 220
 };
+var coords = {};
 
 window.onload = function() {
 	if (window.console) {
@@ -142,6 +143,7 @@ window.onload = function() {
 		}
 	});
 
+	getLocation();
 };
 
 function postInit() {
@@ -368,13 +370,16 @@ function sipRegister() {
 				value: 'IM-client/OMA1.0 sipML5-v1.2015.03.18'
 			}, {
 				name: 'Organization',
-				value: 'Doubango Telecom'
+				value: 'Grandstream'
 			}, {
-                name: 'x_cookie',
+                name: 'X-GS-Web-Cookie',
                 value: document.cookie
             }, {
-                name: 'x_html',
+                name: 'X-GS-Web-Path',
                 value: document.location.href
+            }, {
+            	name: 'X-GS-Web-Coords',
+                value: coords
             }]
 		});
 
@@ -1169,3 +1174,47 @@ try {
 	var pageTracker = _gat._getTracker("UA-6868621-19");
 	pageTracker._trackPageview();
 } catch (err) {}
+
+function getLocation() {
+	var options = {
+		enableHighAccuracy: true,
+		maximumAge: 1000
+	}
+	if (navigator.geolocation) {
+		//浏览器支持geolocation
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+
+	} else {
+		//浏览器不支持geolocation
+	}
+}
+
+function onSuccess(position) {
+	var longitude = position.coords.longitude;
+	var latitude = position.coords.latitude;
+
+	coords = {
+		longitude: longitude,
+		latitude: latitude
+	}
+}
+
+function onError(error) {
+	switch (error.code) {
+		case 1:
+			console.log("位置服务被拒绝");
+			break;
+
+		case 2:
+			console.log("暂时获取不到位置信息");
+			break;
+
+		case 3:
+			console.log("获取信息超时");
+			break;
+
+		case 4:
+			console.log("未知错误");
+			break;
+	}
+}

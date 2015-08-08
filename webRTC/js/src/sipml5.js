@@ -1,5 +1,5 @@
 ﻿/*
-* Copyright (C) 2012 Doubango Telecom <http://www.doubango.org>
+* Copyright (C) 2012 Grandstream <http://www.doubango.org>
 * License: BSD
 * This file is part of Open Source sipML5 solution <http://www.sipml5.org>
 */
@@ -11,7 +11,7 @@
 
 @image html architecture.png "sipML5 solution architecture"
 <br />
-This document has been written by us (<a href="http://www.doubango.org">Doubango Telecom</a>) to help developers to quickly create innovative multimedia applications
+This document has been written by us (<a href="http://www.doubango.org">Grandstream</a>) to help developers to quickly create innovative multimedia applications
 for the Windows, MAC OS X, Linux, iOS and Android platforms. If you are a developer and is looking for the best way to develop a NGN (VoIP, Messaging, Video Conferencing, ...) or rich application for these platforms
 then your are at the right place. <br />
 If you want to get help or have some feedbacks then please visit our website: <a href="http://code.google.com/p/sipml5/">http://code.google.com/p/sipml5/</a> or subscribe to our <a href="http://groups.google.com/group/doubango/"> developer mailing list</a>.

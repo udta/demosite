@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (C) 2012-2015 Doubango Telecom <http://www.doubango.org>
+ * Copyright (C) 2012-2015 Grandstream <http://www.doubango.org>
  * License: BSD
  * This file is part of Open Source sipML5 solution <http://www.sipml5.org>
  */
@@ -11,7 +11,7 @@ var o_stack = new tsip_stack("doubango.org", "alice", "sip:alice@doubango.org", 
     tsip_stack.prototype.SetPassword ("mysecret"),
     tsip_stack.prototype.SetDisplayName("alice"),
     tsip_stack.prototype.SetHeader("User-Agent", "IM-client/OMA1.0 sipML5/v0.0.0000.0"),
-    tsip_stack.prototype.SetHeader("Organization", "Doubango Telecom")
+    tsip_stack.prototype.SetHeader("Organization", "Grandstream")
 );
 @endcode
  - 'doubango.org': SIP domain name a.k.a. <i>realm</i>
@@ -239,7 +239,7 @@ var tsip_transport_state_e = {
     tsip_stack.prototype.SetPassword ("mypassword"),
     tsip_stack.prototype.SetDisplayName("alice"),
     tsip_stack.prototype.SetHeader("User-Agent", "IM-client/OMA1.0 sipML5/v0.0.0000.0"),
-    tsip_stack.prototype.SetHeader("Organization", "Doubango Telecom")
+    tsip_stack.prototype.SetHeader("Organization", "Grandstream")
 );
 @endcode
 */
@@ -548,7 +548,7 @@ tsip_stack.prototype.SetProxyOutBound("192.168.0.10", 5060, tsip_transport_type_
 tsip_stack.prototype.SetPassword ("mypassword"),
 tsip_stack.prototype.SetDisplayName("alice"),
 tsip_stack.prototype.SetHeader("User-Agent", "IM-client/OMA1.0 sipML5/v0.0.0000.0"),
-tsip_stack.prototype.SetHeader("Organization", "Doubango Telecom")
+tsip_stack.prototype.SetHeader("Organization", "Grandstream")
 );
 // or
 o_stack.set(tsip_stack.prototype.SetProxyOutBound("192.168.0.10", 5060, tsip_transport_type_e.UDP));
@@ -567,7 +567,7 @@ tsip_stack.prototype.SetProxyOutBoundUrl("udp://192.168.0.12:5060"),
 tsip_stack.prototype.SetPassword ("mypassword"),
 tsip_stack.prototype.SetDisplayName("alice"),
 tsip_stack.prototype.SetHeader("User-Agent", "IM-client/OMA1.0 sipML5/v0.0.0000.0"),
-tsip_stack.prototype.SetHeader("Organization", "Doubango Telecom")
+tsip_stack.prototype.SetHeader("Organization", "Grandstream")
 );
 // or
 o_stack.set(tsip_stack.prototype.SetProxyOutBoundUrl("udp://192.168.0.12:5060"));
@@ -666,7 +666,7 @@ tsip_stack.prototype.SetEarlyIMSEnabled = function(b_enabled) {
 @code
 o_stack.set(
     tsip_stack.prototype.SetHeader('User-Agent', 'sipML5 client'),
-    tsip_stack.prototype.SetHeader('Organization', 'Doubango Telecom')
+    tsip_stack.prototype.SetHeader('Organization', 'Grandstream')
 );
 @endcode
 */

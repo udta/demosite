@@ -1,5 +1,5 @@
 ﻿/*
-* Copyright (C) 2012-2015 Doubango Telecom <http://www.doubango.org>
+* Copyright (C) 2012-2015 Grandstream <http://www.doubango.org>
 * License: BSD
 * This file is part of Open Source sipML5 solution <http://www.sipml5.org>
 */
@@ -173,7 +173,7 @@ tmedia_session_jsep.prototype.decorate_lo = function () {
         /* Session name for debugging - Requires by webrtc2sip to set RTCWeb type */
         var o_hdr_S;
         if ((o_hdr_S = this.o_sdp_lo.get_header(tsdp_header_type_e.S))) {
-            o_hdr_S.s_value = "Doubango Telecom - " + tsk_utils_get_navigator_friendly_name();
+            o_hdr_S.s_value = "Grandstream - " + tsk_utils_get_navigator_friendly_name();
         }
         /* HACK: https://bugzilla.mozilla.org/show_bug.cgi?id=1072384 */
         var o_hdr_O;
